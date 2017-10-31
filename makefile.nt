@@ -1,5 +1,5 @@
 # $Id$
-BUILDDIR=^\lib^\cii^\1
+BUILDDIR=^.\lib^\cii^\1
 A=.lib
 O=.obj
 E=.exe

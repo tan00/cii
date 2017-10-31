@@ -30,6 +30,7 @@ Makefile.in
 /config.h
 /config.h.in
 /stamp-h1
+/lib
 
 # libtool
 build-aux/ltmain.sh

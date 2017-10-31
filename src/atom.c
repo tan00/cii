@@ -85,13 +85,15 @@ const char *Atom_new(const char *str, int len) {
 	for (h = 0, i = 0; i < len; i++)
 		h = (h<<1) + scatter[(unsigned char)str[i]];
 	h &= NELEMS(buckets)-1;
-	for (p = buckets[h]; p; p = p->link)
+	for (p = buckets[h]; p; p = p->link) 
 		if (len == p->len) {
 			for (i = 0; i < len && p->str[i] == str[i]; )
 				i++;
-			if (i == len)
+			if (i == len)//如果已存在 则直接返回
 				return p->str;
 		}
+
+	//如果未存在  申请空间 并把节点添加到buckets[h]的头部
 	p = ALLOC(sizeof (*p) + len + 1);
 	p->len = len;
 	p->str = (char *)(p + 1);
