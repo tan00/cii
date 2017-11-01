@@ -1,3 +1,6 @@
+/*内存管理   内存池实现
+
+*/
 static char rcsid[] = "$Id$";
 #include <stdlib.h>
 #include <string.h>
